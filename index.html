@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلة حاسبة ذكية</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div id="age-section" class="card">
+        <h2>مرحباً بك</h2>
+        <p>كم عمرك؟</p>
+        <input type="number" id="age-input" placeholder="اكتب عمرك هنا">
+        <button id="btn-login">دخول للحاسبة</button>
+        <p id="age-error" class="error-msg"></p>
+    </div>
+
+    <div id="calc-section" class="card">
+        <h3 id="welcome-msg">الآلة الحاسبة</h3>
+        <input type="text" id="display" readonly style="text-align: left; direction: rtl;">
+        <div class="grid">
+            <button class="btn-del" onclick="clearDisplay()">C</button>
+            <button class="btn-del" onclick="deleteLast()">Del</button>
+            <button class="btn-calc" onclick="appendValue('7')">7</button>
+            <button class="btn-calc" onclick="appendValue('8')">8</button>
+            <button class="btn-calc" onclick="appendValue('9')">9</button>
+            <button class="btn-op" onclick="appendValue('/')">÷</button>
+            <button class="btn-calc" onclick="appendValue('4')">4</button>
+            <button class="btn-calc" onclick="appendValue('5')">5</button>
+            <button class="btn-calc" onclick="appendValue('6')">6</button>
+            <button class="btn-op" onclick="appendValue('*')">×</button>
+            <button class="btn-calc" onclick="appendValue('1')">1</button>
+            <button class="btn-calc" onclick="appendValue('2')">2</button>
+            <button class="btn-calc" onclick="appendValue('3')">3</button>
+             <button class="btn-op" onclick="appendValue('-')">-</button>
+            <button class="btn-calc" onclick="appendValue('0')">0</button>
+            <button class="btn-calc" onclick="appendValue('.')">.</button>
+            <button class="btn-op" onclick="calculateResult()">=</button>
+            <button class="btn-op" onclick="appendValue('+')">+</button>
+           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

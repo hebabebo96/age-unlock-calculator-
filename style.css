@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    transition: all 0.4s ease;
+}
+
+.card h2, .card h3, .card p {
+    color: #ffffff !important;
+}
+.card:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 50px rgba(35, 166, 213, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #23a6d5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1d8bb3;
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+#calc-section {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-calc {
+    background-color: #e4e6eb;
+    color: black;
+    font-weight: bold;
+    padding: 15px 10px;
+}
+
+.btn-calc:hover {
+    background-color: #d8dadf;
+}
+
+.btn-op {
+    background-color: #ff9500;
+    color: white;
+    padding: 15px 10px;
+}
+
+.btn-op:hover {
+    background-color: #e08500;
+}
+
+.btn-del {
+    grid-column: span 2;
+    background-color: #dc3545;
+    color: white;
+    padding: 15px 10px;
+    font-weight: bold;
+}
+
+.btn-del:hover {
+    background-color: #bd2130;
+}
+
+.error-msg {
+    color: #dc3545;
+    font-size: 14px;
+}
